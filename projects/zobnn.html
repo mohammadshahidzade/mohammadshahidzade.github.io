@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZOBNN improves binary-neural-network robustness through deliberately quantized parameters without adding inference-time computation.">
+  <meta name="theme-color" content="#07101a">
+  <title>ZOBNN | Mohammad Shahidzadeh Asadi</title>
+  <link rel="canonical" href="https://mohammadshahidzade.github.io/projects/zobnn.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20260817a">
+  <script src="../script.js" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="../index.html"><span class="brand-mark">MS</span><span class="brand-name">Mohammad Shahidzadeh Asadi</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></nav>
+      <div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button><button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="detail-hero"><div class="shell"><a class="back-link" href="../index.html#work">← Back to selected work</a><div class="detail-heading"><div><div class="section-kicker">DEPENDABLE AI · QUANTIZATION · FAULT TOLERANCE</div><h1>ZOBNN</h1></div><div class="detail-summary"><span class="status-chip">IOLTS 2024</span><p>A deliberately quantized binary-neural-network design that improves resilience to memory faults without adding inference-time computation.</p></div></div></div></section>
+
+    <div class="shell detail-metrics"><div class="detail-metric"><strong>5×</strong><span>ROBUSTNESS IMPROVEMENT</span></div><div class="detail-metric"><strong>0</strong><span>ADDED COMPUTE OVERHEAD</span></div><div class="detail-metric"><strong>IOLTS</strong><span>PEER-REVIEWED · 2024</span></div></div>
+
+    <div class="shell detail-content">
+      <aside class="detail-sidebar"><div><span>Role</span><p>Co-first author and researcher</p></div><div><span>Focus</span><p>Dependable BNN architecture</p></div><div><span>Methods</span><p>Quantization · fault simulation · evaluation</p></div><a class="button button-primary" href="https://arxiv.org/abs/2407.04964" target="_blank" rel="noreferrer">Read the paper ↗</a><a class="button button-secondary" href="https://dblp.org/rec/conf/iolts/GhavamiSSW24" target="_blank" rel="noreferrer">DBLP record ↗</a></aside>
+
+      <article class="detail-body">
+        <figure class="research-figure research-figure-tall">
+          <a href="../assets/images/diagrams/zobnn-architecture.webp" target="_blank" aria-label="Open the full-size ZOBNN architecture diagram"><img src="../assets/images/diagrams/zobnn-architecture.webp" width="2437" height="2600" alt="Detailed comparison of a floating-point neural network, conventional binarization with quantization overhead, and the ZOBNN architecture"></a>
+          <figcaption>ZOBNN architecture and binarization comparison · select to open full size</figcaption>
+        </figure>
+
+        <section class="detail-block"><div class="section-kicker">01 / THE PROBLEM</div><h2>Binary networks still contain vulnerable floating-point parameters.</h2><p>Binary neural networks reduce memory and computation by binarizing weights and activations, but practical architectures retain selected floating-point parameters to preserve accuracy. Experimental fault analysis showed that deviations in those remaining parameters can make the network highly sensitive to memory faults.</p></section>
+
+        <section class="detail-block"><div class="section-kicker">02 / THE METHOD</div><h2>Improve dependability without changing the binary layers.</h2><p>ZOBNN deliberately restricts and uniformly quantizes selected floating-point parameters. The design preserves the existing binary layers while avoiding the extra quantize and dequantize operations that a conventional conversion can introduce.</p><div class="architecture-flow"><span>BNN architecture</span><i></i><span>Identify float parameters</span><i></i><span>Deliberate quantization</span><i></i><span>ZOBNN inference</span></div><ul><li>Analyzed how memory faults affect binary networks and their remaining floating-point parameters.</li><li>Reduced exposure by constraining those parameters to a deliberately quantized representation.</li><li>Preserved the original binary computation path instead of adding new inference stages.</li><li>Evaluated the resulting architecture with extensive experimental fault simulation.</li></ul></section>
+
+        <section class="detail-block"><div class="section-kicker">03 / RESULT</div><h2>More robust inference with no added computation.</h2><p>The reported experiments show a fivefold robustness improvement over a conventional floating-point DNN, without additional computational overhead during inference. The work was published at the 30th IEEE International Symposium on On-Line Testing and Robust System Design in 2024.</p></section>
+      </article>
+    </div>
+
+    <section class="next-project"><a class="shell" href="vtr-cad.html"><div><span>NEXT PROJECT / 06</span><strong>Congestion-aware FPGA CAD</strong></div><b>↗</b></a></section>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>© <span id="year">2026</span> Mohammad Shahidzadeh Asadi</span><a href="../index.html">Portfolio home ↗</a></div></footer>
+</body>
+</html>

@@ -13,7 +13,7 @@
   <title>Mohammad Shahidzadeh Asadi | FPGA Systems Researcher</title>
   <link rel="canonical" href="https://mohammadshahidzade.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260816c">
+  <link rel="stylesheet" href="styles.css?v=20260817a">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
@@ -122,7 +122,7 @@
         <article class="project-card project-featured reveal">
           <a class="card-link" href="projects/meerkat.html" aria-label="Read about MEERKAT"></a>
           <div class="card-top"><span class="project-number">01</span><span class="status-chip">M.A.Sc. thesis · HPCA under review</span></div>
-          <div class="project-visual project-visual-systems"><img src="assets/images/project-fpga-systems.webp" width="1199" height="675" alt="Processor and accelerator tiles connected on an FPGA board" loading="lazy"></div>
+          <div class="project-visual diagram-visual"><img src="assets/images/diagrams/meerkat-system-architecture.webp" width="2400" height="1438" alt="MEERKAT architecture, SoC, and simulation and FPGA platform overview" loading="lazy"><span class="diagram-label">THESIS SYSTEM MAP</span></div>
           <div class="card-body"><div class="card-meta">FPGA systems · Operating systems · Architecture</div><h3>MEERKAT: Accelerators as first-class compute elements</h3><p>A configurable FPGA framework for moving Linux support from software into hardware and quantifying four major sources of operating-system overhead.</p><div class="tech-row"><span>CVA5</span><span>Linux</span><span>LiteX</span><span>VCU118</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -130,7 +130,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/cva5-linux.html" aria-label="Read about Linux support for CVA5"></a>
           <div class="card-top"><span class="project-number">02</span><span class="status-chip">Open-source ecosystem</span></div>
-          <div class="project-visual project-visual-systems project-visual-shift"><img src="assets/images/project-fpga-systems.webp" width="1199" height="675" alt="Layered processor architecture integrated on an FPGA board" loading="lazy"></div>
+          <div class="project-visual diagram-visual"><img src="assets/images/diagrams/cva5-linux-architecture.webp" width="2600" height="1048" alt="CVA5 processor microarchitecture annotated with the components added or modified for Linux support" loading="lazy"><span class="diagram-label">LINUX-ENABLING RTL</span></div>
           <div class="card-body"><div class="card-meta">RISC-V · RTL design · System software</div><h3>Linux-capable CVA5</h3><p>Extended an FPGA-optimized RISC-V core with privilege, virtual memory, interrupts, and the surrounding SoC support needed to boot Linux.</p><div class="tech-row"><span>SystemVerilog</span><span>Verilator</span><span>OpenSBI</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -152,8 +152,16 @@
         </article>
 
         <article class="project-card reveal">
+          <a class="card-link" href="projects/zobnn.html" aria-label="Read about ZOBNN"></a>
+          <div class="card-top"><span class="project-number">05</span><span class="status-chip">IOLTS 2024</span></div>
+          <div class="project-visual diagram-visual diagram-visual-zobnn"><img src="assets/images/diagrams/zobnn-overview-card.webp" width="2437" height="1200" alt="Comparison of a floating-point network, conventional binarization, and the ZOBNN architecture" loading="lazy"><span class="diagram-label">DEPENDABLE BNN DESIGN</span></div>
+          <div class="card-body"><div class="card-meta">Dependable AI · Quantization · Fault tolerance</div><h3>ZOBNN: zero-overhead dependable BNNs</h3><p>Deliberately quantized floating-point parameters improve binary-neural-network robustness without adding inference-time computation.</p><div class="tech-row"><span>BNN</span><span>Quantization</span><span>Fault simulation</span></div></div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="project-card reveal">
           <a class="card-link" href="projects/vtr-cad.html" aria-label="Read about congestion-aware FPGA CAD"></a>
-          <div class="card-top"><span class="project-number">05</span><span class="status-chip">VTR contribution</span></div>
+          <div class="card-top"><span class="project-number">06</span><span class="status-chip">VTR contribution</span></div>
           <div class="project-visual vtr-visual">
             <div class="vtr-map-frame"><img src="assets/images/vtr-routing-utilization.gif" width="250" height="186" alt="Animated VPR routing-utilization heatmap from the official VTR project" loading="lazy"></div>
             <div class="vtr-visual-copy"><span>VPR ROUTING UTILIZATION</span><strong>Congestion becomes visible.</strong><div class="heat-scale" aria-hidden="true"></div><div class="heat-labels"><small>LOW</small><small>HIGH</small></div><small>Official VTR visualization</small></div>
@@ -164,7 +172,7 @@
 
         <article class="project-card reveal">
           <a class="card-link" href="projects/gpu-resimulation.html" aria-label="Read about GPU-accelerated logic resimulation"></a>
-          <div class="card-top"><span class="project-number">06</span><span class="status-chip award">ICCAD contest winner</span></div>
+          <div class="card-top"><span class="project-number">07</span><span class="status-chip award">ICCAD contest winner</span></div>
           <div class="project-visual gpu-resim-visual">
             <div class="gpu-diagram-panel"><img src="assets/images/gpu-resimulation-pipeline.svg" width="1200" height="410" alt="Input registers feeding four layers of combinational gates, resimulated on a GPU, before output registers capture the results" loading="lazy"></div>
             <div class="gpu-hardware-panel"><img src="assets/images/gpu-tesla-public-domain.webp" width="1800" height="615" alt="Illustrative NVIDIA Tesla graphics processor" loading="lazy"><span>CUDA-PARALLEL EVENT SIMULATION</span></div>
@@ -186,7 +194,7 @@
             <div class="pub-year">2025</div><div class="pub-copy"><h3>Automated Verilog Assertion Generation Using Fine-Tuned LLMs with Subtask-Specific Iterative Prompting</h3><p><strong>Mohammad Shahidzadeh</strong>, Behnam Ghavami, Steven J. E. Wilton, Lesley Shannon</p><div class="pub-venue">26th IEEE International Symposium on Quality Electronic Design (ISQED)</div></div><div class="pub-links"><a href="https://arxiv.org/abs/2411.15442" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://dblp.org/rec/conf/isqed/ShahidzadehGWS25" target="_blank" rel="noreferrer">DBLP ↗</a></div>
           </li>
           <li class="publication-item reveal">
-            <div class="pub-year">2024</div><div class="pub-copy"><h3>ZOBNN: Zero-Overhead Dependable Design of Binary Neural Networks with Deliberately Quantized Parameters</h3><p>Behnam Ghavami*, <strong>Mohammad Shahidzadeh*</strong>, Lesley Shannon, Steven J. E. Wilton · <em>*Equal contribution</em></p><div class="pub-venue">30th IEEE International Symposium on On-Line Testing and Robust System Design (IOLTS)</div></div><div class="pub-links"><a href="https://arxiv.org/abs/2407.04964" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://dblp.org/rec/conf/iolts/GhavamiSSW24" target="_blank" rel="noreferrer">DBLP ↗</a></div>
+            <div class="pub-year">2024</div><div class="pub-copy"><h3>ZOBNN: Zero-Overhead Dependable Design of Binary Neural Networks with Deliberately Quantized Parameters</h3><p>Behnam Ghavami*, <strong>Mohammad Shahidzadeh*</strong>, Lesley Shannon, Steven J. E. Wilton · <em>*Equal contribution</em></p><div class="pub-venue">30th IEEE International Symposium on On-Line Testing and Robust System Design (IOLTS)</div></div><div class="pub-links"><a href="projects/zobnn.html">Project ↗</a><a href="https://arxiv.org/abs/2407.04964" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://dblp.org/rec/conf/iolts/GhavamiSSW24" target="_blank" rel="noreferrer">DBLP ↗</a></div>
           </li>
           <li class="publication-item reveal">
             <div class="pub-year">2024</div><div class="pub-copy"><h3>A Semi Black-Box Adversarial Bit-Flip Attack with Limited DNN Model Information</h3><p>Behnam Ghavami, Mani Sadati, <strong>Mohammad Shahidzadeh</strong>, Lesley Shannon, Steven J. E. Wilton</p><div class="pub-venue">42nd IEEE International Conference on Computer Design (ICCD)</div></div><div class="pub-links"><a href="https://arxiv.org/abs/2412.09450" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://doi.org/10.1109/ICCD63220.2024.00025" target="_blank" rel="noreferrer">DOI ↗</a></div>
