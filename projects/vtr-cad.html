@@ -1,11 +1,91 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Congestion-aware FPGA packing and placement research in VTR and VPR, including hMETIS-based hypergraph partitioning."><meta name="theme-color" content="#07101a"><title>Congestion-aware FPGA CAD | Mohammad Shahidzadeh Asadi</title><link rel="canonical" href="https://mohammadshahidzade.github.io/projects/vtr-cad.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css"><script src="../script.js" defer></script></head>
-<body class="detail-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="shell nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">MS</span><span class="brand-name">Mohammad Shahidzadeh Asadi</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button><button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button></div></div></header>
-<main id="main"><section class="detail-hero"><div class="shell"><a class="back-link" href="../index.html#work">← Back to selected work</a><div class="detail-heading"><div><div class="section-kicker">FPGA CAD · VTR / VPR · C++</div><h1>Congestion-aware FPGA CAD</h1></div><div class="detail-summary"><span class="status-chip">VTR pull request #2384</span><p>Placement and packing research that brings routability information earlier into the FPGA implementation flow.</p></div></div></div></section>
-<div class="shell detail-metrics"><div class="detail-metric"><strong>VPR</strong><span>PLACEMENT COST MODEL</span></div><div class="detail-metric"><strong>hMETIS</strong><span>HYPERGRAPH PARTITIONING</span></div><div class="detail-metric"><strong>C++</strong><span>PRODUCTION RESEARCH CODEBASE</span></div></div>
-<div class="shell detail-content"><aside class="detail-sidebar"><div><span>Role</span><p>CAD algorithm developer</p></div><div><span>Flow stages</span><p>Packing · placement · routing analysis</p></div><div><span>Stack</span><p>C++ · VTR · VPR · hMETIS · Make</p></div><a class="button button-primary" href="https://github.com/verilog-to-routing/vtr-verilog-to-routing/pull/2384" target="_blank" rel="noreferrer">View pull request ↗</a><a class="button button-secondary" href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" target="_blank" rel="noreferrer">Explore VTR ↗</a></aside>
-<article class="detail-body"><section class="detail-block"><div class="section-kicker">01 / THE PROBLEM</div><h2>A legal placement is not necessarily a routable placement.</h2><p>FPGA placement traditionally balances wirelength and timing before detailed routing reveals the most difficult congestion hotspots. If routing demand is discovered too late, the flow must absorb detours, timing degradation, or failed routes. Congestion-aware placement adds an early estimate of routing pressure to the placement objective.</p></section>
-<section class="detail-block"><div class="section-kicker">02 / PLACEMENT</div><h2>Make congestion part of the move decision.</h2><div class="architecture-flow"><span>Packed netlist</span><i></i><span>Initial placement</span><i></i><span>Congestion estimate</span><i></i><span>Placement cost</span><i></i><span>VPR routing</span></div><ul><li>Worked inside VTR/VPR’s placement and routing data structures and cost evaluation paths.</li><li>Added congestion information to the placement objective so candidate moves account for both conventional costs and predicted routing demand.</li><li>Instrumented and debugged the flow against representative VTR benchmarks.</li><li>Prepared the implementation for upstream discussion in VTR pull request #2384.</li></ul></section>
-<section class="detail-block"><div class="section-kicker">03 / PACKING</div><h2>Use circuit connectivity before physical placement begins.</h2><p>In related work, the circuit netlist is modeled as a hypergraph and partitioned with hMETIS. The goal is to create groups with strong internal connectivity and fewer expensive cuts, allowing packing and early placement decisions to reflect the communication structure of the design.</p><p>Together, these experiments provided hands-on experience with the complete VTR flow—from logical clusters to placement objectives and downstream routing behavior.</p></section></article></div>
-<section class="next-project"><a class="shell" href="gpu-resimulation.html"><div><span>NEXT PROJECT / 06</span><strong>GPU-accelerated logic resimulation</strong></div><b>↗</b></a></section></main><footer class="site-footer"><div class="shell"><span>© <span id="year">2026</span> Mohammad Shahidzadeh Asadi</span><a href="../index.html">Portfolio home ↗</a></div></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Congestion-aware FPGA packing and placement research in VTR and VPR, including hMETIS-based hypergraph partitioning.">
+  <meta name="theme-color" content="#07101a">
+  <title>Congestion-aware FPGA CAD | Mohammad Shahidzadeh Asadi</title>
+  <link rel="canonical" href="https://mohammadshahidzade.github.io/projects/vtr-cad.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20260816c">
+  <script src="../script.js" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="../index.html"><span class="brand-mark">MS</span><span class="brand-name">Mohammad Shahidzadeh Asadi</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></nav>
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch color theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="detail-hero">
+      <div class="shell">
+        <a class="back-link" href="../index.html#work">← Back to selected work</a>
+        <div class="detail-heading">
+          <div><div class="section-kicker">FPGA CAD · VTR / VPR · C++</div><h1>Congestion-aware FPGA CAD</h1></div>
+          <div class="detail-summary"><span class="status-chip">VTR pull request #2384</span><p>Placement and packing research that brings routability information earlier into the FPGA implementation flow.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell detail-metrics">
+      <div class="detail-metric"><strong>VPR</strong><span>PLACEMENT COST MODEL</span></div>
+      <div class="detail-metric"><strong>hMETIS</strong><span>HYPERGRAPH PARTITIONING</span></div>
+      <div class="detail-metric"><strong>C++</strong><span>PRODUCTION RESEARCH CODEBASE</span></div>
+    </div>
+
+    <div class="shell detail-content">
+      <aside class="detail-sidebar">
+        <div><span>Role</span><p>CAD algorithm developer</p></div>
+        <div><span>Flow stages</span><p>Packing · placement · routing analysis</p></div>
+        <div><span>Stack</span><p>C++ · VTR · VPR · hMETIS · Make</p></div>
+        <a class="button button-primary" href="https://github.com/verilog-to-routing/vtr-verilog-to-routing/pull/2384" target="_blank" rel="noreferrer">View pull request ↗</a>
+        <a class="button button-secondary" href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" target="_blank" rel="noreferrer">Explore VTR ↗</a>
+      </aside>
+
+      <article class="detail-body">
+        <figure class="project-visual detail-project-visual vtr-visual">
+          <div class="vtr-map-frame"><img src="../assets/images/vtr-routing-utilization.gif" width="250" height="186" alt="Animated VPR routing-utilization heatmap from the official VTR project"></div>
+          <div class="vtr-visual-copy"><span>VPR ROUTING UTILIZATION</span><strong>Congestion becomes visible.</strong><div class="heat-scale" aria-hidden="true"></div><div class="heat-labels"><small>LOW</small><small>HIGH</small></div><small>Official VTR visualization</small></div>
+          <figcaption>Routing-utilization view · official VTR project</figcaption>
+        </figure>
+
+        <section class="detail-block">
+          <div class="section-kicker">01 / THE PROBLEM</div>
+          <h2>A legal placement is not necessarily a routable placement.</h2>
+          <p>FPGA placement traditionally balances wirelength and timing before detailed routing reveals the most difficult congestion hotspots. If routing demand is discovered too late, the flow must absorb detours, timing degradation, or failed routes. Congestion-aware placement adds an early estimate of routing pressure to the placement objective.</p>
+        </section>
+
+        <section class="detail-block">
+          <div class="section-kicker">02 / PLACEMENT</div>
+          <h2>Make congestion part of the move decision.</h2>
+          <div class="architecture-flow"><span>Packed netlist</span><i></i><span>Initial placement</span><i></i><span>Congestion estimate</span><i></i><span>Placement cost</span><i></i><span>VPR routing</span></div>
+          <ul>
+            <li>Worked inside VTR/VPR’s placement and routing data structures and cost evaluation paths.</li>
+            <li>Added congestion information to the placement objective so candidate moves account for both conventional costs and predicted routing demand.</li>
+            <li>Instrumented and debugged the flow against representative VTR benchmarks.</li>
+            <li>Prepared the implementation for upstream discussion in VTR pull request #2384.</li>
+          </ul>
+        </section>
+
+        <section class="detail-block">
+          <div class="section-kicker">03 / PACKING</div>
+          <h2>Use circuit connectivity before physical placement begins.</h2>
+          <p>In related work, the circuit netlist is modeled as a hypergraph and partitioned with hMETIS. The goal is to create groups with strong internal connectivity and fewer expensive cuts, allowing packing and early placement decisions to reflect the communication structure of the design.</p>
+          <p>Together, these experiments provided hands-on experience with the complete VTR flow—from logical clusters to placement objectives and downstream routing behavior.</p>
+        </section>
+      </article>
+    </div>
+
+    <section class="next-project"><a class="shell" href="gpu-resimulation.html"><div><span>NEXT PROJECT / 06</span><strong>PALANG: GPU logic resimulation</strong></div><b>↗</b></a></section>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>© <span id="year">2026</span> Mohammad Shahidzadeh Asadi</span><a href="../index.html">Portfolio home ↗</a></div></footer>
+</body>
+</html>

@@ -31,4 +31,4 @@ No package installation or build command is required.
 
 ## Content sources
 
-The portfolio was prepared from the supplied CVs, Google Scholar profile, DBLP, official paper records, the public CVA5 repository/FCCM deck, VTR pull request #2384, and the official ICCAD 2020 contest results.
+The portfolio was prepared from the supplied CVs, Google Scholar profile, DBLP, official paper records, the public CVA5 repository/FCCM deck, VTR pull request #2384, the PALANG source repository, and the official ICCAD 2020 contest results. Third-party image sources and licenses are recorded in [`THIRD_PARTY_ASSETS.md`](THIRD_PARTY_ASSETS.md).

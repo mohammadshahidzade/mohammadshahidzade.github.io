@@ -13,7 +13,7 @@
   <title>Mohammad Shahidzadeh Asadi | FPGA Systems Researcher</title>
   <link rel="canonical" href="https://mohammadshahidzade.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260816c">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
@@ -154,7 +154,10 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/vtr-cad.html" aria-label="Read about congestion-aware FPGA CAD"></a>
           <div class="card-top"><span class="project-number">05</span><span class="status-chip">VTR contribution</span></div>
-          <div class="project-visual project-visual-cad"><img src="assets/images/project-fpga-cad.webp" width="1199" height="675" alt="FPGA logic tiles with congestion-aware routing paths" loading="lazy"></div>
+          <div class="project-visual vtr-visual">
+            <div class="vtr-map-frame"><img src="assets/images/vtr-routing-utilization.gif" width="250" height="186" alt="Animated VPR routing-utilization heatmap from the official VTR project" loading="lazy"></div>
+            <div class="vtr-visual-copy"><span>VPR ROUTING UTILIZATION</span><strong>Congestion becomes visible.</strong><div class="heat-scale" aria-hidden="true"></div><div class="heat-labels"><small>LOW</small><small>HIGH</small></div><small>Official VTR visualization</small></div>
+          </div>
           <div class="card-body"><div class="card-meta">FPGA CAD · Placement · Hypergraph partitioning</div><h3>Congestion-aware packing &amp; placement</h3><p>Modified VTR/VPR placement costs to account for congestion and explored hMETIS-based packing and placement via hypergraph partitioning.</p><div class="tech-row"><span>C++</span><span>VTR / VPR</span><span>hMETIS</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -162,8 +165,11 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/gpu-resimulation.html" aria-label="Read about GPU-accelerated logic resimulation"></a>
           <div class="card-top"><span class="project-number">06</span><span class="status-chip award">ICCAD contest winner</span></div>
-          <div class="project-visual project-visual-cad project-visual-shift"><img src="assets/images/project-fpga-cad.webp" width="1199" height="675" alt="Parallel compute tiles beside a routed FPGA floorplan" loading="lazy"></div>
-          <div class="card-body"><div class="card-meta">GPU acceleration · Simulation · Compilers</div><h3>GPU-accelerated logic resimulation</h3><p>Built a Verilog-to-C++ netlist path and parallel CUDA engine for delay-aware logic resimulation, earning first place in ICCAD 2020 Problem C.</p><div class="tech-row"><span>CUDA</span><span>C++</span><span>GDB</span><span>Valgrind</span></div></div>
+          <div class="project-visual gpu-resim-visual">
+            <div class="gpu-diagram-panel"><img src="assets/images/gpu-resimulation-pipeline.svg" width="1200" height="410" alt="Input registers feeding four layers of combinational gates, resimulated on a GPU, before output registers capture the results" loading="lazy"></div>
+            <div class="gpu-hardware-panel"><img src="assets/images/gpu-tesla-public-domain.webp" width="1800" height="615" alt="Illustrative NVIDIA Tesla graphics processor" loading="lazy"><span>CUDA-PARALLEL EVENT SIMULATION</span></div>
+          </div>
+          <div class="card-body"><div class="card-meta">GPU acceleration · Simulation · Compilers</div><h3>PALANG: GPU logic resimulation</h3><p>Built the preprocessing and CUDA simulation path for delay-aware gate-level resimulation, producing activity data and earning first place in ICCAD 2020 Problem C.</p><div class="tech-row"><span>PALANG</span><span>CUDA</span><span>C++</span><span>SAIF</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
       </div>

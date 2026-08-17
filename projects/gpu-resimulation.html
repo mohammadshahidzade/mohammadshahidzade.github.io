@@ -1,11 +1,92 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="First-place ICCAD 2020 project for GPU-accelerated, delay-aware logic resimulation using C++ and CUDA."><meta name="theme-color" content="#07101a"><title>GPU Logic Resimulation | Mohammad Shahidzadeh Asadi</title><link rel="canonical" href="https://mohammadshahidzade.github.io/projects/gpu-resimulation.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css"><script src="../script.js" defer></script></head>
-<body class="detail-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="shell nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">MS</span><span class="brand-name">Mohammad Shahidzadeh Asadi</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button><button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button></div></div></header>
-<main id="main"><section class="detail-hero"><div class="shell"><a class="back-link" href="../index.html#work">← Back to selected work</a><div class="detail-heading"><div><div class="section-kicker">CUDA · SIMULATION · COMPILERS</div><h1>GPU logic resimulation</h1></div><div class="detail-summary"><span class="status-chip award">First place · ICCAD 2020</span><p>A delay-aware logic-resimulation toolchain that compiles Verilog netlists into parallel GPU execution.</p></div></div></div></section>
-<div class="shell detail-metrics"><div class="detail-metric"><strong>1st</strong><span>ICCAD 2020 PROBLEM C</span></div><div class="detail-metric"><strong>CUDA</strong><span>GPU PARALLEL EXECUTION</span></div><div class="detail-metric"><strong>20</strong><span>TEAMS IN THE PROBLEM</span></div></div>
-<div class="shell detail-content"><aside class="detail-sidebar"><div><span>Team</span><p>cada0143</p></div><div><span>Collaborator</span><p>Seyed Mani Sadati</p></div><div><span>Advisor</span><p>Prof. Behnam Ghavami</p></div><div><span>Stack</span><p>C++ · CUDA · Make · GDB · Valgrind</p></div><a class="button button-primary" href="https://www.iccad-contest.org/2020/winners.html" target="_blank" rel="noreferrer">Official results ↗</a></aside>
-<article class="detail-body"><section class="detail-block"><div class="section-kicker">01 / CHALLENGE</div><h2>Parallelize a problem constrained by circuit dependencies.</h2><p>Logic resimulation recomputes circuit behavior while respecting gate dependencies and propagation delays. GPUs offer massive throughput, but irregular netlists, event ordering, and temporal behavior make straightforward parallelization ineffective.</p></section>
-<section class="detail-block"><div class="section-kicker">02 / APPROACH</div><h2>Compile the circuit into a GPU-ready execution model.</h2><div class="architecture-flow"><span>Verilog design</span><i></i><span>C++ netlist</span><i></i><span>Dependency schedule</span><i></i><span>CUDA kernels</span><i></i><span>Waveform result</span></div><ul><li>Developed a compiler path that converts the Verilog design into a C++ netlist representation suitable for optimized execution.</li><li>Structured the circuit into parallel work while preserving dependencies and delay-correct behavior.</li><li>Implemented GPU kernels for the compute-intensive resimulation stages.</li><li>Used GDB, Valgrind, and waveform analysis to validate correctness and resolve memory and timing issues.</li><li>Optimized the complete path rather than a single kernel, accounting for parsing, scheduling, transfer, and execution costs.</li></ul></section>
-<section class="detail-block"><div class="section-kicker">03 / RESULT</div><h2>First place in ICCAD Contest Problem C.</h2><p>The solution earned first place in the 2020 CAD Contest at ICCAD, Problem C: GPU-Accelerated Logic Resimulation. The official results list team cada0143—Seyed Mani Sadati and Mohammad Shahidzadeh, advised by Prof. Behnam Ghavami—as the winner among 20 teams.</p></section></article></div>
-<section class="next-project"><a class="shell" href="meerkat.html"><div><span>BACK TO PROJECT / 01</span><strong>MEERKAT</strong></div><b>↗</b></a></section></main><footer class="site-footer"><div class="shell"><span>© <span id="year">2026</span> Mohammad Shahidzadeh Asadi</span><a href="../index.html">Portfolio home ↗</a></div></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PALANG, the first-place ICCAD 2020 project for GPU-accelerated, delay-aware logic resimulation using C++ and CUDA.">
+  <meta name="theme-color" content="#07101a">
+  <title>PALANG: GPU Logic Resimulation | Mohammad Shahidzadeh Asadi</title>
+  <link rel="canonical" href="https://mohammadshahidzade.github.io/projects/gpu-resimulation.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20260816c">
+  <script src="../script.js" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="../index.html"><span class="brand-mark">MS</span><span class="brand-name">Mohammad Shahidzadeh Asadi</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></nav>
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch color theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="detail-hero">
+      <div class="shell">
+        <a class="back-link" href="../index.html#work">← Back to selected work</a>
+        <div class="detail-heading">
+          <div><div class="section-kicker">CUDA · SIMULATION · COMPILERS</div><h1>PALANG: GPU logic resimulation</h1></div>
+          <div class="detail-summary"><span class="status-chip award">First place · ICCAD 2020</span><p>A delay-aware gate-level resimulation toolchain with preprocessing and two-dimensional parallel execution on CUDA GPUs.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell detail-metrics">
+      <div class="detail-metric"><strong>1st</strong><span>ICCAD 2020 PROBLEM C</span></div>
+      <div class="detail-metric"><strong>CUDA</strong><span>GPU PARALLEL EXECUTION</span></div>
+      <div class="detail-metric"><strong>20</strong><span>TEAMS IN THE PROBLEM</span></div>
+    </div>
+
+    <div class="shell detail-content">
+      <aside class="detail-sidebar">
+        <div><span>Team</span><p>cada0143</p></div>
+        <div><span>Collaborator</span><p>Seyed Mani Sadati</p></div>
+        <div><span>Advisor</span><p>Prof. Behnam Ghavami</p></div>
+        <div><span>Stack</span><p>C++ · CUDA · GNU Make</p></div>
+        <a class="button button-primary" href="https://github.com/ManiSadati/GPU_Logic_resimulator" target="_blank" rel="noreferrer">PALANG on GitHub ↗</a>
+        <a class="button button-secondary" href="https://www.iccad-contest.org/2020/winners.html" target="_blank" rel="noreferrer">Official results ↗</a>
+      </aside>
+
+      <article class="detail-body">
+        <figure class="project-visual detail-project-visual gpu-resim-visual">
+          <div class="gpu-diagram-panel"><img src="../assets/images/gpu-resimulation-pipeline.svg" width="1200" height="410" alt="Input registers feeding four layers of AND, OR, XOR, XNOR, and NOT gates before output registers capture the GPU-resimulated result"></div>
+          <div class="gpu-hardware-panel"><img src="../assets/images/gpu-tesla-public-domain.webp" width="1800" height="615" alt="Illustrative NVIDIA Tesla graphics processor"><span>CUDA-PARALLEL EVENT SIMULATION</span></div>
+          <figcaption>RTL pipeline concept · illustrative GPU hardware</figcaption>
+        </figure>
+
+        <section class="detail-block">
+          <div class="section-kicker">01 / CHALLENGE</div>
+          <h2>Parallelize a problem constrained by circuit dependencies.</h2>
+          <p>Logic resimulation recomputes circuit activity while respecting gate dependencies and propagation delays. GPUs offer massive throughput, but irregular netlists, event ordering, and temporal behavior make straightforward parallelization ineffective.</p>
+        </section>
+
+        <section class="detail-block">
+          <div class="section-kicker">02 / APPROACH</div>
+          <h2>Prepare the design, then resimulate it on the GPU.</h2>
+          <div class="architecture-flow"><span>Netlist + SDF + cell library</span><i></i><span>netlist.txt</span><i></i><span>CUDA resimulation</span><i></i><span>SAIF activity</span></div>
+          <ul>
+            <li>Built a preprocessing path for a gate-level <code>.gv</code> netlist, <code>.sdf</code> delays, and the provided <code>.vlib</code> standard-cell library.</li>
+            <li>Converted the design into the <code>netlist.txt</code> representation consumed by the GPU simulator.</li>
+            <li>Implemented the CUDA simulation path with two-dimensional parallelism while preserving dependency- and delay-aware behavior.</li>
+            <li>Consumed VCD stimulus and emitted SAIF switching-activity data for downstream power analysis.</li>
+            <li>Optimized the complete path rather than a single kernel, including parsing, scheduling, transfer, and execution costs.</li>
+          </ul>
+        </section>
+
+        <section class="detail-block">
+          <div class="section-kicker">03 / RESULT</div>
+          <h2>First place in ICCAD Contest Problem C.</h2>
+          <p>The solution earned first place in the 2020 CAD Contest at ICCAD, Problem C: GPU-Accelerated Logic Resimulation. The official results list team cada0143—Seyed Mani Sadati and Mohammad Shahidzadeh, advised by Prof. Behnam Ghavami—as the winner among 20 teams.</p>
+        </section>
+      </article>
+    </div>
+
+    <section class="next-project"><a class="shell" href="meerkat.html"><div><span>BACK TO PROJECT / 01</span><strong>MEERKAT</strong></div><b>↗</b></a></section>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>© <span id="year">2026</span> Mohammad Shahidzadeh Asadi</span><a href="../index.html">Portfolio home ↗</a></div></footer>
+</body>
+</html>
