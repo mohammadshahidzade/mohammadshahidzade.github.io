@@ -1,6 +1,6 @@
 # Mohammad Shahidzadeh Asadi — personal website
 
-A dependency-free static portfolio prepared for GitHub Pages. It includes a responsive home page, six project case studies, an updated CV, publication links, a thesis download, light/dark themes, and basic SEO/social metadata.
+A dependency-free static portfolio prepared for GitHub Pages. It includes a responsive home page, six project case studies, an updated CV, publication links, light/dark themes, original generated artwork, and basic SEO/social metadata. The thesis manuscript is intentionally not included while the related paper is under review.
 
 ## Preview locally
 
@@ -31,4 +31,4 @@ No package installation or build command is required.
 
 ## Content sources
 
-The portfolio was prepared from the supplied current/older CVs, M.A.Sc. thesis, Google Scholar profile, DBLP, official paper records, the public CVA5 repository/FCCM deck, VTR pull request #2384, and the official ICCAD 2020 contest results.
+The portfolio was prepared from the supplied CVs, Google Scholar profile, DBLP, official paper records, the public CVA5 repository/FCCM deck, VTR pull request #2384, and the official ICCAD 2020 contest results.

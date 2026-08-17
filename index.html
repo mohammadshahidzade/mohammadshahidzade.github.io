@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Mohammad Shahidzadeh Asadi - computer engineering researcher working across FPGA systems, RISC-V, hardware verification, CAD, and dependable AI.">
-  <meta name="theme-color" content="#07110f">
+  <meta name="theme-color" content="#07101a">
   <meta property="og:title" content="Mohammad Shahidzadeh Asadi | FPGA Systems Researcher">
   <meta property="og:description" content="Research and engineering across FPGA systems, RISC-V, operating systems, hardware verification, CAD, and dependable AI.">
   <meta property="og:type" content="website">
@@ -80,44 +80,20 @@
         </div>
       </div>
 
-      <div class="hero-system reveal" aria-label="Research stack diagram">
-        <div class="scope-line"><span>RESEARCH STACK</span><span>01—04</span></div>
-        <div class="system-board">
-          <div class="trace trace-a"></div>
-          <div class="trace trace-b"></div>
-          <div class="trace trace-c"></div>
-          <div class="board-node node-os">
-            <span class="node-index">01</span>
-            <strong>Linux / O/S</strong>
-            <small>Scheduling · VM · interrupts</small>
-          </div>
-          <div class="board-node node-cpu featured">
-            <span class="node-index">02</span>
-            <strong>CVA5 RISC-V</strong>
-            <small>Linux-capable soft processor</small>
-          </div>
-          <div class="board-node node-accel">
-            <span class="node-index">03</span>
-            <strong>Accelerators</strong>
-            <small>First-class compute elements</small>
-          </div>
-          <div class="board-node node-cad">
-            <span class="node-index">04</span>
-            <strong>FPGA CAD</strong>
-            <small>Pack · place · route</small>
-          </div>
-          <span class="signal-dot dot-one"></span>
-          <span class="signal-dot dot-two"></span>
-          <span class="signal-dot dot-three"></span>
+      <figure class="hero-art reveal">
+        <div class="scope-line"><span>CROSS-LAYER RESEARCH</span><span>HW ↔ SW</span></div>
+        <div class="hero-image-frame">
+          <img src="assets/images/hero-fpga-systems.webp" width="1000" height="1000" alt="Editorial rendering of an FPGA board linking processor and accelerator tiles through copper and cyan signal paths" fetchpriority="high">
+          <figcaption><span>Architecture</span><span>Systems</span><span>CAD</span></figcaption>
         </div>
-        <div class="system-caption"><span>HW</span><div></div><span>SW</span></div>
-      </div>
+        <div class="system-caption"><span>PROCESSOR</span><div></div><span>ACCELERATOR</span></div>
+      </figure>
     </section>
 
     <section class="proof-strip" aria-label="Research highlights">
       <div class="shell proof-grid">
-        <div class="proof-item reveal"><strong>260×</strong><span>lower accelerator communication overhead</span></div>
-        <div class="proof-item reveal"><strong>7.3×</strong><span>more functionally correct LLM-generated assertions</span></div>
+        <div class="proof-item reveal"><strong>M.A.Sc.</strong><span>Computer Engineering · Simon Fraser University</span></div>
+        <div class="proof-item reveal"><strong>3.99</strong><span>B.Sc. GPA · top-three class rank</span></div>
         <div class="proof-item reveal"><strong>4</strong><span>peer-reviewed conference papers</span></div>
         <div class="proof-item reveal"><strong>1st</strong><span>ICCAD CAD Contest, Problem C</span></div>
       </div>
@@ -146,11 +122,7 @@
         <article class="project-card project-featured reveal">
           <a class="card-link" href="projects/meerkat.html" aria-label="Read about MEERKAT"></a>
           <div class="card-top"><span class="project-number">01</span><span class="status-chip">M.A.Sc. thesis · HPCA under review</span></div>
-          <div class="project-visual meerkat-visual" aria-hidden="true">
-            <div class="visual-label">MEERKAT</div>
-            <div class="compute-map"><span>CPU</span><i></i><span>O/S</span><i></i><span>HA</span></div>
-            <div class="visual-metric"><b>260×</b><small>communication</small></div>
-          </div>
+          <div class="project-visual project-visual-systems"><img src="assets/images/project-fpga-systems.webp" width="1199" height="675" alt="Processor and accelerator tiles connected on an FPGA board" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">FPGA systems · Operating systems · Architecture</div><h3>MEERKAT: Accelerators as first-class compute elements</h3><p>A configurable FPGA framework for moving Linux support from software into hardware and quantifying four major sources of operating-system overhead.</p><div class="tech-row"><span>CVA5</span><span>Linux</span><span>LiteX</span><span>VCU118</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -158,7 +130,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/cva5-linux.html" aria-label="Read about Linux support for CVA5"></a>
           <div class="card-top"><span class="project-number">02</span><span class="status-chip">Open-source ecosystem</span></div>
-          <div class="project-visual cva5-visual" aria-hidden="true"><span>RV32</span><div class="pipeline"><i>F</i><i>D</i><i>E</i><i>W</i></div><small>→ Linux</small></div>
+          <div class="project-visual project-visual-systems project-visual-shift"><img src="assets/images/project-fpga-systems.webp" width="1199" height="675" alt="Layered processor architecture integrated on an FPGA board" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">RISC-V · RTL design · System software</div><h3>Linux-capable CVA5</h3><p>Extended an FPGA-optimized RISC-V core with privilege, virtual memory, interrupts, and the surrounding SoC support needed to boot Linux.</p><div class="tech-row"><span>SystemVerilog</span><span>Verilator</span><span>OpenSBI</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -166,7 +138,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/assertcraft.html" aria-label="Read about automated assertion generation"></a>
           <div class="card-top"><span class="project-number">03</span><span class="status-chip">ISQED 2025</span></div>
-          <div class="project-visual assertion-visual" aria-hidden="true"><code>spec → <b>LLM</b> → SVA</code><div><span>compile</span><span>check</span><span>refine</span></div></div>
+          <div class="project-visual project-visual-ai"><img src="assets/images/project-ai-verification.webp" width="1199" height="675" alt="Neural-network structure flowing through timing waveforms into digital logic" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">Formal verification · LLMs · EDA</div><h3>Automated Verilog assertion generation</h3><p>A subtask-focused fine-tuning and iterative repair flow for producing higher-quality SystemVerilog assertions from specifications.</p><div class="tech-row"><span>Python</span><span>SVA</span><span>JasperGold</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -174,7 +146,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/dnn-builder.html" aria-label="Read about the DNN accelerator builder"></a>
           <div class="card-top"><span class="project-number">04</span><span class="status-chip">Full-stack FPGA flow</span></div>
-          <div class="project-visual dnn-visual" aria-hidden="true"><div class="layers"><i></i><i></i><i></i><i></i></div><span>PyTorch</span><b>→</b><span>RTL</span><b>→</b><span>LiteX</span></div>
+          <div class="project-visual project-visual-ai project-visual-shift"><img src="assets/images/project-ai-verification.webp" width="1199" height="675" alt="Neural-network layers connected to a grid of hardware logic cells" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">DNN acceleration · Tooling · SoC integration</div><h3>DNN accelerator builder</h3><p>Extended supported neural-network layers, added a PyTorch-facing flow, and integrated a streaming accelerator into the LiteX SoC workflow.</p><div class="tech-row"><span>PyTorch</span><span>Verilog</span><span>LiteX</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -182,7 +154,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/vtr-cad.html" aria-label="Read about congestion-aware FPGA CAD"></a>
           <div class="card-top"><span class="project-number">05</span><span class="status-chip">VTR contribution</span></div>
-          <div class="project-visual cad-visual" aria-hidden="true"><div class="cad-grid"></div><span class="hotspot h1"></span><span class="hotspot h2"></span><span class="route-line"></span><b>congestion-aware</b></div>
+          <div class="project-visual project-visual-cad"><img src="assets/images/project-fpga-cad.webp" width="1199" height="675" alt="FPGA logic tiles with congestion-aware routing paths" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">FPGA CAD · Placement · Hypergraph partitioning</div><h3>Congestion-aware packing &amp; placement</h3><p>Modified VTR/VPR placement costs to account for congestion and explored hMETIS-based packing and placement via hypergraph partitioning.</p><div class="tech-row"><span>C++</span><span>VTR / VPR</span><span>hMETIS</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -190,7 +162,7 @@
         <article class="project-card reveal">
           <a class="card-link" href="projects/gpu-resimulation.html" aria-label="Read about GPU-accelerated logic resimulation"></a>
           <div class="card-top"><span class="project-number">06</span><span class="status-chip award">ICCAD contest winner</span></div>
-          <div class="project-visual gpu-visual" aria-hidden="true"><div class="gpu-die"><i></i><i></i><i></i><i></i><i></i><i></i></div><code>Verilog → C++ → CUDA</code></div>
+          <div class="project-visual project-visual-cad project-visual-shift"><img src="assets/images/project-fpga-cad.webp" width="1199" height="675" alt="Parallel compute tiles beside a routed FPGA floorplan" loading="lazy"></div>
           <div class="card-body"><div class="card-meta">GPU acceleration · Simulation · Compilers</div><h3>GPU-accelerated logic resimulation</h3><p>Built a Verilog-to-C++ netlist path and parallel CUDA engine for delay-aware logic resimulation, earning first place in ICCAD 2020 Problem C.</p><div class="tech-row"><span>CUDA</span><span>C++</span><span>GDB</span><span>Valgrind</span></div></div>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </article>
@@ -217,7 +189,7 @@
             <div class="pub-year">2022</div><div class="pub-copy"><h3>Blind Data Adversarial Bit-Flip Attack against Deep Neural Networks</h3><p>Behnam Ghavami, Mani Sadati, <strong>Mohammad Shahidzadeh</strong>, Zhenman Fang, Lesley Shannon</p><div class="pub-venue">25th Euromicro Conference on Digital Systems Design (DSD)</div></div><div class="pub-links"><a href="https://www.sfu.ca/~zhenman/files/C27-DSD2022-BDFA.pdf" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://doi.org/10.1109/DSD57027.2022.00126" target="_blank" rel="noreferrer">DOI ↗</a></div>
           </li>
         </ol>
-        <div class="review-note reveal"><span>IN REVIEW</span><div><strong>Operating System Support for Accelerators as First-Class Compute Elements in Heterogeneous Systems</strong><p>M.A.Sc. thesis research submitted to HPCA 2027. Manuscript decisions are pending.</p></div><a href="assets/Mohammad_Thesis.pdf">Read thesis ↗</a></div>
+        <div class="review-note reveal"><span>IN REVIEW</span><div><strong>Operating System Support for Accelerators as First-Class Compute Elements in Heterogeneous Systems</strong><p>M.A.Sc. research submitted to HPCA 2027. Manuscript decisions are pending.</p></div><span class="review-status">MANUSCRIPT NOT PUBLIC</span></div>
       </div>
     </section>
 
@@ -235,12 +207,12 @@
 
     <section class="section capabilities-section" aria-labelledby="capabilities-title">
       <div class="shell">
-        <div class="section-heading reveal"><div><div class="section-kicker">05 / TOOLKIT</div><h2 id="capabilities-title">Capabilities.</h2></div><p>A cross-layer toolkit for building and evaluating real systems.</p></div>
+        <div class="section-heading reveal"><div><div class="section-kicker">05 / TOOLKIT</div><h2 id="capabilities-title">Tools &amp; technologies.</h2></div><p>The languages and toolchains I use in implementation and research.</p></div>
         <div class="capability-grid">
-          <div class="capability reveal"><span>01</span><h3>Hardware design</h3><p>SystemVerilog, Verilog, VHDL, RTL design, custom execution units, DMA, PLIC, CLINT, virtual memory</p></div>
-          <div class="capability reveal"><span>02</span><h3>FPGA &amp; CAD</h3><p>Vivado, VTR, VPR, Yosys, Quartus, LiteX, hMETIS, placement, packing, routing</p></div>
-          <div class="capability reveal"><span>03</span><h3>Verification</h3><p>JasperGold, SymbiYosys, Verilator, ModelSim, assertions, formal property verification</p></div>
-          <div class="capability reveal"><span>04</span><h3>Software &amp; ML</h3><p>C/C++, Python, CUDA, PyTorch, Linux kernel, OpenSBI, Docker, GDB, Valgrind</p></div>
+          <div class="capability reveal"><span>01</span><h3>RTL &amp; synthesis</h3><p>SystemVerilog · Verilog · VHDL · Vivado · Quartus · Yosys</p></div>
+          <div class="capability reveal"><span>02</span><h3>FPGA CAD</h3><p>VTR · VPR · hMETIS</p></div>
+          <div class="capability reveal"><span>03</span><h3>Verification &amp; simulation</h3><p>JasperGold · SymbiYosys · Verilator · ModelSim</p></div>
+          <div class="capability reveal"><span>04</span><h3>Software &amp; acceleration</h3><p>C · C++ · Python · CUDA · PyTorch · LiteX · OpenSBI · Linux · Docker · GDB · Valgrind</p></div>
         </div>
       </div>
     </section>
